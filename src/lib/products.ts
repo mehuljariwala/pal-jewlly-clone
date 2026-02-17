@@ -402,4 +402,24 @@ export const COLLECTION_MAP: Record<string, { title: string; tag: string; descri
     tag: "best-seller",
     description: "Explore our full collection of everyday demi-fine jewellery.",
   },
+  "silver-luxe": {
+    title: "Fine Silver",
+    tag: "best-seller",
+    description: "Premium sterling silver jewellery with rhodium plating for lasting shine.",
+  },
+  "shraddhas-favourite": {
+    title: "Shraddha's Favourite",
+    tag: "best-seller",
+    description: "Hand-picked favourites by Shraddha Kapoor from our demi-fine collection.",
+  },
+  "post-valentine-sale": {
+    title: "Post Valentine Sale",
+    tag: "best-seller",
+    description: "Flat 50% off on selected pieces. Limited time offer!",
+  },
+  "republic-day-sale": {
+    title: "Republic Day Sale",
+    tag: "new-arrivals",
+    description: "Celebrate with extra savings on new arrivals.",
+  },
 };

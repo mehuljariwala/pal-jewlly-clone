@@ -175,7 +175,10 @@ export default function CartPage() {
                   <p className="text-[11px] text-[#766b5b] mt-1">Tax included</p>
                 </div>
 
-                <button className="w-full py-3.5 bg-[#631b14] text-white text-[13px] font-semibold uppercase tracking-[0.15em] hover:bg-[#4a1410] transition-colors flex items-center justify-center gap-2 mb-3">
+                <button
+                  onClick={() => alert('Thank you! Checkout functionality coming soon.')}
+                  className="w-full py-3.5 bg-[#631b14] text-white text-[13px] font-semibold uppercase tracking-[0.15em] hover:bg-[#4a1410] transition-colors flex items-center justify-center gap-2 mb-3"
+                >
                   Checkout <ArrowRight size={16} />
                 </button>
 

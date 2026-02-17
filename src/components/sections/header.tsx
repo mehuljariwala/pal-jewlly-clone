@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import { Search, User, Heart, ShoppingBag, MapPin, ChevronDown } from 'lucide-react';
+import Link from 'next/link';
+import { Search, MapPin, ChevronDown } from 'lucide-react';
+import HeaderCartBadge from '@/components/header-cart-badge';
 
 const Header = () => {
   return (
@@ -68,21 +70,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Utility Icons */}
-        <div className="flex items-center gap-4 lg:gap-6">
-          <a href="/account" className="flex flex-col items-center group relative">
-            <User className="w-6 h-6 text-black group-hover:text-brand-maroon transition-colors" />
-            <span className="hidden">Login</span>
-          </a>
-          <a href="/wishlist" className="flex flex-col items-center group relative">
-            <Heart className="w-6 h-6 text-black group-hover:text-brand-maroon transition-colors" />
-            <span className="absolute -top-1 -right-2 bg-black text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-          </a>
-          <a href="/cart" className="flex flex-col items-center group relative">
-            <ShoppingBag className="w-6 h-6 text-black group-hover:text-brand-maroon transition-colors" />
-            <span className="absolute -top-1 -right-2 bg-black text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-          </a>
-        </div>
+        <HeaderCartBadge />
       </div>
 
       {/* Navigation Links */}
@@ -90,37 +78,37 @@ const Header = () => {
         <div className="container mx-auto px-[15px]">
           <ul className="flex justify-center items-center gap-[30px]">
             <li>
-              <a href="/collections/new-arrivals" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">New Arrivals</a>
+              <Link href="/collections/new-arrivals" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">New Arrivals</Link>
             </li>
             <li>
-              <a href="/collections/best-seller" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Best Seller</a>
+              <Link href="/collections/best-seller" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Best Seller</Link>
             </li>
             <li>
-              <a href="/collections/silver-luxe" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Fine Silver</a>
+              <Link href="/collections/best-seller" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Fine Silver</Link>
             </li>
             <li className="relative">
-              <a href="/pages/gold-jewellery" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">
+              <Link href="/collections/fine-gold" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">
                 9KT Fine Gold
                 <span className="absolute -top-[15px] right-[-15px] bg-[#c9bca9] text-white text-[9px] px-1 py-0.5 font-bold rounded-sm">LUXE</span>
-              </a>
+              </Link>
             </li>
             <li className="relative">
-              <a href="/pages/emily-in-paris" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">
+              <Link href="/collections/new-arrivals" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">
                 Emily In Paris
                 <span className="absolute -top-[15px] right-[-25px] bg-[#631b14] text-white text-[9px] px-1 py-0.5 font-bold rounded-sm whitespace-nowrap">À LA MODE</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/collections/shraddhas-favourite" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Shraddha's Favourite</a>
+              <Link href="/collections/best-seller" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Shraddha&apos;s Favourite</Link>
             </li>
             <li>
-              <a href="/collections/shop-by-category" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Demi-fine Jewellery</a>
+              <Link href="/collections/shop-by-category" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Demi-fine Jewellery</Link>
             </li>
             <li>
-              <a href="/collections/gifts-for-her" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Gifting</a>
+              <Link href="/collections/gifts-for-her" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">Gifting</Link>
             </li>
             <li>
-              <a href="/pages/about-us" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">About Us</a>
+              <Link href="/collections/best-seller" className="text-[13px] font-medium uppercase tracking-wider hover:text-brand-maroon transition-colors">About Us</Link>
             </li>
           </ul>
         </div>
