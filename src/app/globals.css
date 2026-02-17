@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #000000;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #000000;
+
+  --color-primary: #631b14;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #c9bca9;
+  --color-secondary-foreground: #000000;
+
+  --color-muted: #fafafa;
+  --color-muted-foreground: #766b5b;
+
+  --color-accent: #766b5b;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #ff0000;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #eeeeee;
+  --color-input: #eeeeee;
+  --color-ring: #631b14;
+
+  --color-chart-1: #631b14;
+  --color-chart-2: #c9bca9;
+  --color-chart-3: #766b5b;
+  --color-chart-4: #000000;
+  --color-chart-5: #ff0000;
+
+  --color-sidebar: #ffffff;
+  --color-sidebar-foreground: #000000;
+  --color-sidebar-primary: #631b14;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #fafafa;
+  --color-sidebar-accent-foreground: #631b14;
+  --color-sidebar-border: #eeeeee;
+  --color-sidebar-ring: #631b14;
+
+  --color-brand-maroon: #631b14;
+  --color-brand-sand: #c9bca9;
+  --color-brand-taupe: #766b5b;
+  --color-brand-highlight: #ff0000;
+
+  --font-jost: "Jost", sans-serif;
+
+  --radius-lg: 0px;
+  --radius-md: 0px;
+  --radius-sm: 0px;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #eeeeee;
+  }
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --card: #ffffff;
+    --card-foreground: #000000;
+    --popover: #ffffff;
+    --popover-foreground: #000000;
+    --primary: #631b14;
+    --primary-foreground: #ffffff;
+    --secondary: #c9bca9;
+    --secondary-foreground: #000000;
+    --muted: #fafafa;
+    --muted-foreground: #766b5b;
+    --accent: #766b5b;
+    --accent-foreground: #ffffff;
+    --destructive: #ff0000;
+    --destructive-foreground: #ffffff;
+    --border: #eeeeee;
+    --input: #eeeeee;
+    --ring: #631b14;
+    --radius: 0px;
+    --sidebar-background: #ffffff;
+    --sidebar-foreground: #000000;
+    --sidebar-primary: #631b14;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #fafafa;
+    --sidebar-accent-foreground: #631b14;
+    --sidebar-border: #eeeeee;
+    --sidebar-ring: #631b14;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-jost);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  a {
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .font-nav {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .font-announcement {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .grid-gap {
+    gap: 30px;
+  }
+
+  .shadow-subtle {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+}
+
+nextjs-portal {
+  display: none !important;
+}
