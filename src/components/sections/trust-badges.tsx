@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Heart, ShieldCheck, Diamond, Sparkles } from "lucide-react";
 
